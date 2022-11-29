@@ -1,9 +1,9 @@
 /* variable css */
 *{
-    --sidebar-background : rgb(255, 254, 254);
-    --sidebar-fontcolor : rgb(46, 46, 49);
-    --sidebar-backhover: rgb(238, 235, 235);
-    --sidebar-width: 14%;
+    --sidebar-background : rgb(255, 255, 255);
+    --sidebar-fontcolor : rgb(84, 84, 85);
+    --sidebar-backhover: rgb(226, 237, 247);
+    --sidebar-width: 16%;
 }
 /* variable css */
 
@@ -14,6 +14,7 @@ body{
 
 hr{
     margin: 0 5%;
+    color: var(--sidebar-fontcolor);
 }
 /* property html */
 
@@ -24,7 +25,7 @@ hr{
     height: 100%;
     width: var(--sidebar-width);
     background-color: var(--sidebar-background);
-    box-shadow: 0 0 8px 1px #8f8f8f;
+    box-shadow: 0 0 13px 0.5px #8f8f8f;
 }
 
 .logo-section{
@@ -61,6 +62,12 @@ hr{
     padding: 10px 0px 10px 18px;
     background-color: var(--sidebar-background);
 }
+
+.sidebar-item:hover{
+    background-color: var(--sidebar-backhover);
+    color: rgb(127, 175, 224);
+}
+
 .sidebar-item i{
     font-size: 25px;
     float: left;
@@ -74,6 +81,10 @@ hr{
     margin-left: 16px;
 }
 
+.item-selected{
+    color: rgb(60, 120, 199);
+}
+
 .logout-btn{
     position: absolute;
     bottom: 0;
@@ -83,23 +94,17 @@ hr{
     font-style: normal;
     text-decoration: none;
     padding: 10px 18px 10px 18px;
-    flex-direction: row;
-    justify-content:center;
-    background-color: var(--sidebar-backhover);
-    display: block;
+    background-color: var(--sidebar-background);
 }
 
-.logout-btn :hover{
-    background-color: var(--sidebar-background);
+.logout-btn:hover{
+    background-color: var(--sidebar-backhover);
+    color: rgb(127, 175, 224);
 }
 
 .logout-btn i{
     font-size: 25px;
     float: left;
-}
-
-.sidebar-item:hover{
-    background-color: var(--sidebar-backhover);
 }
 
 .sidebar-logout-title{
