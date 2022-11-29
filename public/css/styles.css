@@ -77,10 +77,12 @@ hr{
 .logout-btn{
     position: absolute;
     bottom: 0;
+    right: 0;
+    left: 0;
     color: var(--sidebar-fontcolor);
     font-style: normal;
     text-decoration: none;
-    padding: 10px 0px 10px 18px;
+    padding: 10px 18px 10px 18px;
     flex-direction: row;
     justify-content:center;
     background-color: var(--sidebar-backhover);
@@ -100,5 +102,11 @@ hr{
     background-color: var(--sidebar-backhover);
 }
 
-
+.sidebar-logout-title{
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    padding-left: 15px;
+    padding-top: 3px;
+    margin-left: 25px;
+}
 /* sidebar */
