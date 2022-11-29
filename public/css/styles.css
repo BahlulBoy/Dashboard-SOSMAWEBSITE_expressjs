@@ -2,6 +2,8 @@
 *{
     --sidebar-background : rgb(255, 254, 254);
     --sidebar-fontcolor : rgb(46, 46, 49);
+    --sidebar-backhover: rgb(238, 235, 235);
+    --sidebar-width: 13%;
 }
 /* variable css */
 
@@ -20,7 +22,7 @@ hr{
 .sidebar{
     position: fixed;
     height: 100%;
-    width: 200px;
+    width: var(--sidebar-width);
     background-color: var(--sidebar-background);
     box-shadow: 0 0 8px 1px #8f8f8f;
 }
@@ -52,16 +54,18 @@ hr{
 }
 
 .sidebar-item{
+    display: block;
     color: var(--sidebar-fontcolor);
     font-style: normal;
     text-decoration: none;
     padding: 10px 0px 10px 18px;
-    display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    background-color: var(--sidebar-background);
 }
 .sidebar-item i{
     font-size: 25px;
+    float: left;
 }
 
 .sidebar-item-title{
@@ -70,5 +74,22 @@ hr{
     padding-left: 10px;
     padding-top: 3px;
 }
+
+.logout-btn{
+    position: absolute;
+    bottom: 0;
+    color: var(--sidebar-fontcolor);
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 0px 10px 18px;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: var(--sidebar-background);
+}
+
+.sidebar-item:hover{
+    background-color: var(--sidebar-backhover);
+}
+
 
 /* sidebar */
