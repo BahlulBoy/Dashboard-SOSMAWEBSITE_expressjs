@@ -11,8 +11,12 @@ app.get('/profile', (req, res) => {
     res.render('profile');
 })
 
+app.get('/anggota', (req, res) => {
+    res.render('anggota');
+})
+
 app.use('/', (req, res) => {
-    res.send("Halaman Tidak Ditemukan");
+    res.send("halaman ini tidak ada :(")
 })
 
 app.listen(port, () => {

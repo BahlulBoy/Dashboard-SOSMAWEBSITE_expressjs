@@ -1,7 +1,7 @@
 /* variable css */
 *{
-    --sidebar-background : rgb(243, 241, 241);
-    --sidebar-fontcolor : rgb(84, 84, 85);
+    --sidebar-background : rgb(106, 92, 240);
+    --sidebar-fontcolor : rgb(241, 241, 255);
     --sidebar-backhover: rgb(226, 237, 247);
     --sidebar-width: 16%;
     --content-main-width: 84%;
@@ -84,7 +84,8 @@ hr{
 }
 
 .item-selected{
-    color: rgb(60, 120, 199);
+    color: rgb(82, 121, 172);
+    background-color: rgb(234, 238, 243);
 }
 
 .logout-btn{
@@ -124,7 +125,7 @@ hr{
     right: 0;
     height: 100%;
     width: var(--content-main-width);
-    background-color: rgb(241, 239, 239);
+    background-color: rgb(245, 247, 255);
 }
 
 .content-name{
@@ -136,11 +137,13 @@ hr{
 
 /* profile page css */
 .profile-page{
-    background-color: #fdfdfd;
+    background-color: #f9fbff;
     height:300px;
     width: 90%;
     margin-top: 20px;
     margin-left: 5%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0px #738fb1;
 }
 
 .profile-page{
@@ -188,6 +191,38 @@ hr{
 .desc-profile .edit-profile{
     border-style: none;
     margin-left: 82%;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 35px 10px 35px;
+    border-radius: 10px;
+    color: #f9fbff;
+    background-color: var(--sidebar-background);
 }
 /* profile page css */
+
+/* anggota page css */
+.anggota-page{
+    background-color: #f9fcff;
+    margin-top: 20px;
+    margin-left: 2.5%;
+    width: 95%;
+    height: 83%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px #738fb1;
+}
+
+.option-anggota{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.option-anggota .add-anggota{
+    display: flex;
+    justify-content: center;
+    background-color: var(--sidebar-background);
+    padding: 10px 25px 10px 25px;
+    border-radius: 8px;
+    margin: 15px 15px 0 0;
+    color: #f9fbff;
+    font-weight: 700;
+    text-decoration: none;
+}
+/* anggota page css */
