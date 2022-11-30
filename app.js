@@ -7,8 +7,8 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(layout);
 
-app.get('/', (req, res) => {
-    res.render('index');
+app.get('/profile', (req, res) => {
+    res.render('profile');
 })
 
 app.use('/', (req, res) => {
