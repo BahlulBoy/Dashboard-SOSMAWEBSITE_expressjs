@@ -4,6 +4,7 @@
     --sidebar-fontcolor : rgb(84, 84, 85);
     --sidebar-backhover: rgb(226, 237, 247);
     --sidebar-width: 16%;
+    --content-main-width: 84%;
 }
 /* variable css */
 
@@ -26,6 +27,7 @@ hr{
     width: var(--sidebar-width);
     background-color: var(--sidebar-background);
     box-shadow: 0 0 13px 0.5px #8f8f8f;
+    z-index: 10;
 }
 
 .logo-section{
@@ -78,7 +80,7 @@ hr{
     font-weight: 800;
     padding-left: 15px;
     padding-top: 3px;
-    margin-left: 16px;
+    margin-left: 19px;
 }
 
 .item-selected{
@@ -115,3 +117,77 @@ hr{
     margin-left: 25px;
 }
 /* sidebar */
+
+/* content main */
+.content-main{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: var(--content-main-width);
+    background-color: rgb(241, 239, 239);
+}
+
+.content-name{
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 45px;
+}
+/* content main */
+
+/* profile page css */
+.profile-page{
+    background-color: #fdfdfd;
+    height:300px;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.profile-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-pict{
+    padding-left: 5%;
+    padding-bottom: 2%;
+}
+
+.profile-pict .img{
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+}
+
+.desc-profile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-desc-page{
+    margin-bottom: 80px;
+    margin-left: 30px;
+}
+
+.desc-profile .profile-name{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.desc-profile .profile-email{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.desc-profile .edit-profile{
+    border-style: none;
+    margin-left: 82%;
+    padding: 10px 30px 10px 30px;
+}
+/* profile page css */
