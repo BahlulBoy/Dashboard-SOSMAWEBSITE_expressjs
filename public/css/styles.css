@@ -161,6 +161,7 @@ hr{
     background-color: blue;
     height: 150px;
     width: 150px;
+    border-radius: 100%;
 }
 
 .desc-profile{
@@ -225,4 +226,71 @@ hr{
     font-weight: 700;
     text-decoration: none;
 }
+
+.database-anggota{
+    margin-top: 10px;
+    height: 90%;
+}
+
+.database-anggota .database-anggota-title{
+    background-color: rgb(139, 126, 255);
+    color: var(--sidebar-fontcolor);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 20px 0px 20px 0px;
+    margin: 5px 7px 0px 7px;
+}
+
+.anggota-nim{
+    text-align: center;
+    width: 15%;
+}
+.anggota-nama{
+    text-align: center;
+    width: 30%;
+}
+.anggota-tanggal-lahir{
+    text-align: center;
+    width: 12%;
+}
+.anggota-prodi{
+    text-align: center;
+    width: 20%;
+}
+.anggota-periode{
+    text-align: center;
+    width: 10%;
+}
+.edit-anggota{
+    text-align: center;
+    width: 13%;
+}
+
+.edit-anggota button{
+    width: 30%;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--sidebar-background);
+    color: var(--sidebar-fontcolor);
+}
+
+.database-anggota .database-anggota-value-store{
+    overflow: auto;
+    height: 87%;
+}
+
+.database-anggota .database-anggota-value-store .database-anggota-value{
+    background-color: rgb(236, 234, 255);
+    color: #15223d;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    margin: 5px 7px 0px 7px;
+}
 /* anggota page css */
+
+/* Berita page css */
