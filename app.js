@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
-const layout = require("express-ejs-layouts");
+const layout_ejs = require("express-ejs-layouts");
 const port = 5000;
 
-app.set('view engine', 'ejs');
+app.use(layout_ejs);
 app.use(express.static('public'));
-app.use(layout);
+app.set('view engine', 'ejs');
+app.set('layout', './layout/layout');
 
 app.get('/profile', (req, res) => {
     res.render('profile');
@@ -27,7 +28,7 @@ app.get('/pengaturan-user', (req, res) => {
 })
 
 app.use('/', (req, res) => {
-    res.send("halaman ini tidak ada :(")
+    res.render('error', { layout : "./layout/errorlayout" });
 })
 
 app.listen(port, () => {
