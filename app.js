@@ -1,14 +1,25 @@
 const express = require('express');
 const app = express();
 const layout_ejs = require("express-ejs-layouts");
+const mysql = require("mysql");
+const bodyparser = require("body-parser");
 const port = 5000;
-
 
 
 app.use(layout_ejs);
 app.use(express.static('public'));
+
+
 app.set('view engine', 'ejs');
 app.set('layout', './layout/layout');
+
+
+const pool = mysql.createPool({
+    host        : 'localhost',
+    user        : 'root',
+    password    : '',
+    database    : 'web_organisasi',
+});
 
 
 // routing
@@ -28,7 +39,13 @@ app.get('/proker', (req, res) => {
     res.render('proker');
 })
 app.get('/pengaturan-user', (req, res) => {
-    res.render('pengaturan_user');
+    var data = pool.getConnection((err, connection) => {
+        connection.query("SELECT * FROM user ", function (err, result, field) {
+            if (err) throw err;
+            res.render('pengaturan_user', {database : result});
+            connection.release();
+        })
+    })
 })
 
 app.use('/', (req, res) => {

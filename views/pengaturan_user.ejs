@@ -16,16 +16,18 @@
                     <div class="edit-user"></div>
                 </div>
                 <div class="database-user-value-store">
+                    <% for( let index = 0; index < database.length; index++ ) { %> 
                     <div class="database-user-value">
-                        <div class="user-nama">Ahfaitar Abdil Hakim</div>
-                        <div class="user-email">Ahfaitar@gmail.com</div>
-                        <div class="user-username">Bahlulboy</div>
-                        <div class="user-foto">idk.jpg</div>
+                        <div class="user-nama"><%= database[index].nama %></div>
+                        <div class="user-email"><%= database[index].email %></div>
+                        <div class="user-username"><%= database[index].username %></div>
+                        <div class="user-foto"><%= database[index].foto %></div>
                         <div class="edit-user">
                             <button><i class="bi bi-trash"></i></button>
                             <button><i class="bi bi-pencil-square"></i></button>
                         </div>
                     </div>
+                    <% } %>
                 </div>
             </div>
         </div>
