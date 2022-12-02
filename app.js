@@ -27,16 +27,40 @@ app.get('/profile', (req, res) => {
     res.render('profile');
 })
 app.get('/anggota', (req, res) => {
-    res.render('anggota');
+    var data = pool.getConnection((err, connection) => {
+        connection.query("SELECT * FROM anggota ", function (err, result, field) {
+          if (err) throw err;
+          res.render('anggota', {database : result});
+          connection.release();
+        })
+    })
 })
 app.get('/berita', (req, res) => {
-    res.render('berita');
+    var data = pool.getConnection((err, connection) => {
+        connection.query("SELECT * FROM berita ", function (err, result, field) {
+          if (err) throw err;
+          res.render('berita', {database : result});
+          connection.release();
+        })
+    })
 })
 app.get('/periode', (req, res) => {
-    res.render('periode');
+    var data = pool.getConnection((err, connection) => {
+        connection.query("SELECT * FROM periode ", function (err, result, field) {
+          if (err) throw err;
+          res.render('periode', {database : result});
+          connection.release();
+        })
+    })
 })
 app.get('/proker', (req, res) => {
-    res.render('proker');
+    var data = pool.getConnection((err, connection) => {
+        connection.query("SELECT * FROM proker ", function (err, result, field) {
+          if (err) throw err;
+          res.render('proker', {database : result});
+          connection.release();
+        })
+    })
 })
 app.get('/pengaturan-user', (req, res) => {
     var data = pool.getConnection((err, connection) => {

@@ -1,0 +1,42 @@
+<section class="content">
+    <div class="content-main">
+        <div class="content-name">
+            Periode
+        </div>
+        <div class="periode-page">
+            <div class="option-periode">
+                <a href="/periode/add_periode" class="add-periode">Add periode</a>
+            </div>
+            <div class="database-periode">
+                <div class="database-periode-title">
+                    <div class="periode-id">id</div>
+                    <div class="periode-tahun">Tahun</div>
+                    <div class="periode-prodi">Nama Periode</div>
+                    <div class="edit-periode"></div>
+                </div>
+                <div class="database-periode-value-store">
+                    <% for( let index = 0; index < database.length; index++ ) { %>
+                    <div class="database-periode-value">
+                        <div class="periode-id"><%= database[index].Id_Periode %></div>
+                        <div class="periode-tahun"><%= database[index].Tahun %></div>
+                        <div class="periode-prodi"><%= database[index].Nama_Periode %></div>
+                        <div class="edit-periode">
+                            <button><i class="bi bi-trash"></i></button>
+                            <button><i class="bi bi-pencil-square"></i></button>
+                        </div>
+                    </div>
+                    <% } %>
+                    <div class="database-periode-value">
+                        <div class="periode-id">213140707111106</div>
+                        <div class="periode-tahun">Ahfaitar Abdil Hakim</div>
+                        <div class="periode-prodi">15 Maret 2003</div>
+                        <div class="edit-periode">
+                            <button><i class="bi bi-trash"></i></button>
+                            <button><i class="bi bi-pencil-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
