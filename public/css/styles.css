@@ -607,7 +607,7 @@ hr{
 }
 /* profile page css */
 
-/* anggota page css */
+/* periode page css */
 .periode-page{
     background-color: #f9fcff;
     margin-top: 20px;
@@ -692,3 +692,105 @@ hr{
     margin: 5px 7px 0px 7px;
 }
 /* periode page css */
+
+/* proker page css */
+.proker-page{
+    background-color: #f9fcff;
+    margin-top: 20px;
+    margin-left: 2.5%;
+    width: 95%;
+    height: 83%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px #738fb1;
+}
+
+.option-proker{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.option-proker .add-proker{
+    display: flex;
+    justify-content: center;
+    background-color: var(--sidebar-background);
+    padding: 10px 25px 10px 25px;
+    border-radius: 8px;
+    margin: 15px 15px 0 0;
+    color: #f9fbff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.database-proker{
+    margin-top: 10px;
+    height: 90%;
+}
+
+.database-proker .database-proker-title{
+    background-color: rgb(139, 126, 255);
+    color: var(--sidebar-fontcolor);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 20px 0px 20px 0px;
+    margin: 5px 7px 0px 7px;
+}
+
+.proker-nama{
+    text-align: center;
+    width: 15%;
+}
+.proker-tanggal{
+    text-align: center;
+    width: 10%;
+}
+.proker-lokasi{
+    text-align: center;
+    width: 15%;
+}
+.proker-deskripsi{
+    text-align: center;
+    width: 15%;
+}
+.proker-penanggung-jawab{
+    text-align: center;
+    width: 15%;
+}
+.proker-dokumentasi{
+    text-align: center;
+    width: 10%;
+}
+.proker-periode{
+    text-align: center;
+    width: 10%;
+}
+.edit-proker{
+    text-align: center;
+    width: 10%;
+}
+
+.edit-proker button{
+    width: 30%;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--sidebar-background);
+    color: var(--sidebar-fontcolor);
+}
+
+.database-proker .database-proker-value-store{
+    overflow: auto;
+    height: 87%;
+}
+
+.database-proker .database-proker-value-store .database-proker-value{
+    background-color: rgb(236, 234, 255);
+    color: #15223d;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    margin: 5px 7px 0px 7px;
+}
+/* proker page css */

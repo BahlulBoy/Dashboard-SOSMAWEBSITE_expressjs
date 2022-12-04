@@ -17,17 +17,19 @@
                     <div class="edit-anggota"></div>
                 </div>
                 <div class="database-anggota-value-store">
+                    <% for( let index = 0; index < database.length; index++ ) { %>
                     <div class="database-anggota-value">
-                        <div class="anggota-nim">213140707111106</div>
-                        <div class="anggota-nama">Ahfaitar Abdil Hakim</div>
-                        <div class="anggota-tanggal-lahir">15 Maret 2003</div>
-                        <div class="anggota-prodi">Teknologi Informasi</div>
-                        <div class="anggota-periode">1945-now</div>
+                        <div class="anggota-nim"><%= database[index].nim %></div>
+                        <div class="anggota-nama"><%= database[index].nama %></div>
+                        <div class="anggota-tanggal-lahir"><%= database[index].tanggal_lahir %></div>
+                        <div class="anggota-prodi"><%= database[index].prodi %></div>
+                        <div class="anggota-periode"><%= database[index].periode %></div>
                         <div class="edit-anggota">
                             <button><i class="bi bi-trash"></i></button>
                             <button><i class="bi bi-pencil-square"></i></button>
                         </div>
                     </div>
+                    <% } %>
                 </div>
             </div>
         </div>

@@ -1,0 +1,41 @@
+<section class="content">
+    <div class="content-main">
+        <div class="content-name">
+            Proker
+        </div>
+        <div class="proker-page">
+            <div class="option-proker">
+                <a href="/proker/add_proker" class="add-proker">Add proker</a>
+            </div>
+            <div class="database-proker">
+                <div class="database-proker-title">
+                    <div class="proker-nama">nama_proker</div>
+                    <div class="proker-tanggal">tanggal</div>
+                    <div class="proker-lokasi">lokasi</div>
+                    <div class="proker-deskripsi">deskripsi</div>
+                    <div class="proker-penanggung-jawab">penanggung jawab</div>
+                    <div class="proker-dokumentasi">dokumentasi</div>
+                    <div class="proker-periode">periode</div>
+                    <div class="edit-proker"></div>
+                </div>
+                <div class="database-proker-value-store">
+                    <% for( let index = 0; index < database.length; index++ ) { %>
+                    <div class="database-proker-value">
+                        <div class="proker-nama"><%= database[index].nama_proker %></div>
+                        <div class="proker-tanggal"><%= database[index].tanggal %></div>
+                        <div class="proker-lokasi"><%= database[index].lokasi %></div>
+                        <div class="proker-deskripsi"><%= database[index].deskripsi %></div>
+                        <div class="proker-penanggung-jawab"><%= database[index].penanggungjawab %></div>
+                        <div class="proker-dokumentasi"><%= database[index].dokumentasi %></div>
+                        <div class="proker-periode"><%= database[index].periode %></div>
+                        <div class="edit-proker">
+                            <button><i class="bi bi-trash"></i></button>
+                            <button><i class="bi bi-pencil-square"></i></button>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
