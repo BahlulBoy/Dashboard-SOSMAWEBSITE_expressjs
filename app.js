@@ -21,19 +21,19 @@ app.get('/profile', (req, res) => {
     res.render('profile');
 })
 app.get('/anggota', (req, res) => {
-    con.connect('anggota', res);
+    con.connect('anggota', res, 'SELECT *, nama_periode FROM anggota INNER JOIN periode ON anggota.periode = periode.id_periode');
 })
 app.get('/berita', (req, res) => {
-    con.connect('berita', res);
+    con.connect('berita', res, 'SELECT *, nama FROM berita INNER JOIN anggota ON berita.penulis = anggota.nim');
 })
 app.get('/periode', (req, res) => {
-    con.connect('periode', res);
+    con.connect('periode', res, 'SELECT * FROM periode');
 })
 app.get('/proker', (req, res) => {
-    con.connect('proker', res);
+    con.connect('proker', res, 'SELECT *, nama, nama_periode FROM proker INNER JOIN anggota ON proker.penanggungjawab = anggota.nim INNER JOIN periode ON proker.periode = periode.id_periode');
 })
 app.get('/user', (req, res) => {
-    con.connect('user', res);
+    con.connect('user', res, 'SELECT * FROM user');
 })
 
 

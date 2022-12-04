@@ -5,7 +5,7 @@
         </div>
         <div class="user-page">
             <div class="option-user">
-                <a href="/anggota/add_anggota" class="add-user">Add Anggota</a>
+                <a href="/anggota/add_user" class="add-user">Add User</a>
             </div>
             <div class="database-user">
                 <div class="database-user-title">
@@ -23,8 +23,8 @@
                         <div class="user-username"><%= database[index].username %></div>
                         <div class="user-foto"><%= database[index].foto %></div>
                         <div class="edit-user">
-                            <button><i class="bi bi-trash"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <a><i class="bi bi-trash"></i></a>
+                            <a><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>

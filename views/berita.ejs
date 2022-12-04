@@ -21,10 +21,10 @@
                         <div class="berita-id"><%= database[index].id_berita %></div>
                         <div class="berita-title"><%= database[index].judul_berita %></div>
                         <div class="berita-value"><%= database[index].isi_berita %></div>
-                        <div class="berita-penulis"><%= database[index].penulis %> </div>
+                        <div class="berita-penulis"><%= database[index].nama %> </div>
                         <div class="edit-berita">
-                            <button><i class="bi bi-trash"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <a><i class="bi bi-trash"></i></a>
+                            <a><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>

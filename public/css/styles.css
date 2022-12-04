@@ -268,9 +268,9 @@ hr{
     width: 13%;
 }
 
-.edit-anggota button{
+.edit-anggota a{
     width: 30%;
-    padding: 10px 0 10px 0;
+    padding: 10px 15px 10px 15px;
     border-radius: 10px;
     border: none;
     background-color: var(--sidebar-background);
@@ -364,9 +364,9 @@ hr{
     width: 12%;
 }
 
-.edit-berita button{
+.edit-berita a{
     width: 30%;
-    padding: 10px 0 10px 0;
+    padding: 10px 15px 10px 15px;
     border-radius: 10px;
     border: none;
     background-color: var(--sidebar-background);
@@ -388,70 +388,7 @@ hr{
     padding: 20px 0px 20px 0px;
     margin: 5px 7px 0px 7px;
 }
-
-/* pengaturan user page CSS */
-.profile-page{
-    background-color: #f9fbff;
-    height:300px;
-    width: 90%;
-    margin-top: 20px;
-    margin-left: 5%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 0px #738fb1;
-}
-
-.profile-page{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.profile-pict{
-    padding-left: 5%;
-    padding-bottom: 2%;
-}
-
-.profile-pict .img{
-    background-color: blue;
-    height: 150px;
-    width: 150px;
-    border-radius: 100%;
-}
-
-.desc-profile{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.profile-desc-page{
-    margin-bottom: 80px;
-    margin-left: 30px;
-}
-
-.desc-profile .profile-name{
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.desc-profile .profile-email{
-    margin-top: 5px;
-    font-size: 20px;
-    font-weight: 100;
-}
-
-.desc-profile .edit-profile{
-    border-style: none;
-    margin-left: 82%;
-    padding: 10px 35px 10px 35px;
-    border-radius: 10px;
-    color: #f9fbff;
-    background-color: var(--sidebar-background);
-}
-/* profile page css */
+/* berita page css */
 
 /* anggota page css */
 .user-page{
@@ -517,9 +454,9 @@ hr{
     width: 13%;
 }
 
-.edit-user button{
+.edit-user a{
     width: 30%;
-    padding: 10px 0 10px 0;
+    padding: 10px 15px 10px 15px;
     border-radius: 10px;
     border: none;
     background-color: var(--sidebar-background);
@@ -542,70 +479,6 @@ hr{
     margin: 5px 7px 0px 7px;
 }
 /* pengaturan user page CSS */
-
-/* periode page css */
-.profile-page{
-    background-color: #f9fbff;
-    height:300px;
-    width: 90%;
-    margin-top: 20px;
-    margin-left: 5%;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 0px #738fb1;
-}
-
-.profile-page{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.profile-pict{
-    padding-left: 5%;
-    padding-bottom: 2%;
-}
-
-.profile-pict .img{
-    background-color: blue;
-    height: 150px;
-    width: 150px;
-    border-radius: 100%;
-}
-
-.desc-profile{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.profile-desc-page{
-    margin-bottom: 80px;
-    margin-left: 30px;
-}
-
-.desc-profile .profile-name{
-    font-size: 40px;
-    font-weight: 600;
-}
-
-.desc-profile .profile-email{
-    margin-top: 5px;
-    font-size: 20px;
-    font-weight: 100;
-}
-
-.desc-profile .edit-profile{
-    border-style: none;
-    margin-left: 82%;
-    padding: 10px 35px 10px 35px;
-    border-radius: 10px;
-    color: #f9fbff;
-    background-color: var(--sidebar-background);
-}
-/* profile page css */
 
 /* periode page css */
 .periode-page{
@@ -667,9 +540,9 @@ hr{
     width: 20%;
 }
 
-.edit-periode button{
+.edit-periode a{
     width: 30%;
-    padding: 10px 0 10px 0;
+    padding: 10px 15px 10px 15px;
     border-radius: 10px;
     border: none;
     background-color: var(--sidebar-background);
@@ -769,9 +642,9 @@ hr{
     width: 10%;
 }
 
-.edit-proker button{
+.edit-proker a{
     width: 30%;
-    padding: 10px 0 10px 0;
+    padding: 10px 15px 10px 15px;
     border-radius: 10px;
     border: none;
     background-color: var(--sidebar-background);

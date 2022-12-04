@@ -25,12 +25,11 @@
                         <div class="proker-tanggal"><%= database[index].tanggal %></div>
                         <div class="proker-lokasi"><%= database[index].lokasi %></div>
                         <div class="proker-deskripsi"><%= database[index].deskripsi %></div>
-                        <div class="proker-penanggung-jawab"><%= database[index].penanggungjawab %></div>
+                        <div class="proker-penanggung-jawab"><%= database[index].nama %></div>
                         <div class="proker-dokumentasi"><%= database[index].dokumentasi %></div>
-                        <div class="proker-periode"><%= database[index].periode %></div>
+                        <div class="proker-periode"><%= database[index].nama_periode %></div>
                         <div class="edit-proker">
-                            <button><i class="bi bi-trash"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <a href="/proker/trash?id=<%= database[index].nama_proker %>"><i class="bi bi-trash"></i></a> <a><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>
