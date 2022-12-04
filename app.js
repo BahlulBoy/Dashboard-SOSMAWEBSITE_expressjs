@@ -1,12 +1,12 @@
 const express = require('express');
-const layout_ejs = require("express-ejs-layouts");
+const layout_ejs = require('express-ejs-layouts');
 const mysql = require("mysql");
 const bodyparser = require("body-parser");
 const con = require("./database_connect");
 const port = 5000;
 
 const app = express();
-var jsonParser = bodyparser.json()
+var jsonParser = bodyparser.json();
 app.use(layout_ejs);
 app.use(express.static('public'));
 app.use(jsonParser);
