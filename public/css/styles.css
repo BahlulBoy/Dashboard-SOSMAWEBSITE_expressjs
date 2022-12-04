@@ -133,6 +133,30 @@ hr{
     margin-left: 5%;
     font-size: 45px;
 }
+.content-page{
+    background-color: #f9fcff;
+    margin-top: 20px;
+    margin-left: 2.5%;
+    width: 95%;
+    height: 83%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0px #738fb1;
+}
+.option-page{
+    display: flex;
+    justify-content: flex-end;
+}
+.option-page .add-btn{
+    display: flex;
+    justify-content: center;
+    background-color: var(--sidebar-background);
+    padding: 10px 25px 10px 25px;
+    border-radius: 8px;
+    margin: 15px 15px 0 0;
+    color: #f9fbff;
+    font-weight: 700;
+    text-decoration: none;
+}
 /* content main */
 
 /* profile page css */
@@ -201,33 +225,6 @@ hr{
 /* profile page css */
 
 /* anggota page css */
-.anggota-page{
-    background-color: #f9fcff;
-    margin-top: 20px;
-    margin-left: 2.5%;
-    width: 95%;
-    height: 83%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0px #738fb1;
-}
-
-.option-anggota{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.option-anggota .add-anggota{
-    display: flex;
-    justify-content: center;
-    background-color: var(--sidebar-background);
-    padding: 10px 25px 10px 25px;
-    border-radius: 8px;
-    margin: 15px 15px 0 0;
-    color: #f9fbff;
-    font-weight: 700;
-    text-decoration: none;
-}
-
 .database-anggota{
     margin-top: 10px;
     height: 90%;
@@ -295,33 +292,6 @@ hr{
 /* anggota page css */
 
 /* Berita page css */
-.berita-page{
-    background-color: #f9fcff;
-    margin-top: 20px;
-    margin-left: 2.5%;
-    width: 95%;
-    height: 83%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0px #738fb1;
-}
-
-.option-berita{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.option-berita .add-berita{
-    display: flex;
-    justify-content: center;
-    background-color: var(--sidebar-background);
-    padding: 10px 25px 10px 25px;
-    border-radius: 8px;
-    margin: 15px 15px 0 0;
-    color: #f9fbff;
-    font-weight: 700;
-    text-decoration: none;
-}
-
 .database-berita{
     margin-top: 10px;
     height: 90%;
@@ -391,33 +361,6 @@ hr{
 /* berita page css */
 
 /* anggota page css */
-.user-page{
-    background-color: #f9fcff;
-    margin-top: 20px;
-    margin-left: 2.5%;
-    width: 95%;
-    height: 83%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0px #738fb1;
-}
-
-.option-user{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.option-user .add-user{
-    display: flex;
-    justify-content: center;
-    background-color: var(--sidebar-background);
-    padding: 10px 25px 10px 25px;
-    border-radius: 8px;
-    margin: 15px 15px 0 0;
-    color: #f9fbff;
-    font-weight: 700;
-    text-decoration: none;
-}
-
 .database-user{
     margin-top: 10px;
     height: 90%;
@@ -481,16 +424,6 @@ hr{
 /* pengaturan user page CSS */
 
 /* periode page css */
-.periode-page{
-    background-color: #f9fcff;
-    margin-top: 20px;
-    margin-left: 2.5%;
-    width: 95%;
-    height: 83%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0px #738fb1;
-}
-
 .option-periode{
     display: flex;
     justify-content: flex-end;
@@ -567,33 +500,6 @@ hr{
 /* periode page css */
 
 /* proker page css */
-.proker-page{
-    background-color: #f9fcff;
-    margin-top: 20px;
-    margin-left: 2.5%;
-    width: 95%;
-    height: 83%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0px #738fb1;
-}
-
-.option-proker{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.option-proker .add-proker{
-    display: flex;
-    justify-content: center;
-    background-color: var(--sidebar-background);
-    padding: 10px 25px 10px 25px;
-    border-radius: 8px;
-    margin: 15px 15px 0 0;
-    color: #f9fbff;
-    font-weight: 700;
-    text-decoration: none;
-}
-
 .database-proker{
     margin-top: 10px;
     height: 90%;

@@ -35,6 +35,12 @@ app.get('/proker', (req, res) => {
 app.get('/user', (req, res) => {
     con.connect('user', res, 'SELECT * FROM user');
 })
+app.get('/add', (req, res) => {
+    var page = req.query.page;
+    if (page == "anggota") {
+        res.render('add_page/anggota', {layout : "./layout/errorlayout"})
+    }
+})
 
 
 app.use('/', (req, res) => {
