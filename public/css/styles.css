@@ -246,7 +246,7 @@ hr{
 }
 .anggota-nama{
     text-align: center;
-    width: 30%;
+    width: 20%;
 }
 .anggota-tanggal-lahir{
     text-align: center;
@@ -257,6 +257,10 @@ hr{
     width: 20%;
 }
 .anggota-periode{
+    text-align: center;
+    width: 10%;
+}
+.anggota-jabatan{
     text-align: center;
     width: 10%;
 }

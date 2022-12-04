@@ -1,0 +1,56 @@
+*{
+    --background-color : #f9fcff;
+    --page-backround-color : #f9fcff;
+    --btn-background : rgb(106, 92, 240);
+    --shadow-box : #738fb1;
+    --color-font : #15223d;
+}
+body{
+    color: var(--color-font);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    overflow: auto;
+}
+.add-page{
+    position: absolute;
+    background-color: var(--page-backround-color);
+    margin-top: 2%;
+    margin-bottom: 40px;
+    width: 55%;
+    height: auto;
+    box-shadow: 0 0 10px 0px var(--shadow-box);
+    border-radius: 20px;
+}
+.titleAndbutton{
+    padding: 3% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titleAndbutton .title{
+    font-size: 30px;
+    margin-left: 3%;
+}
+.titleAndbutton a{
+    margin-right: 3%;
+    background-color: var(--btn-background);
+    padding: 5px 30px;
+    color: rgb(241, 241, 255);
+    border-radius: 15px;
+    text-decoration: none;
+}
+.form-add{
+    padding: 0 3%;
+}
+
+.form-add button{
+    margin-bottom: 25px;
+    margin-right: 3%;
+    background-color: var(--btn-background);
+    padding: 5px 30px;
+    color: rgb(241, 241, 255);
+    border-radius: 15px;
+    text-decoration: none;
+}
