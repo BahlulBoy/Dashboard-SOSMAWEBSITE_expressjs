@@ -22,13 +22,18 @@
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Periode</label>
-            <input type="text" class="form-control" id="periode" placeholder="Periode" name="periode">
+            <select class="form-select" aria-label="Default select example" id="periode" name="periode">
+                <option selected>Pilih Periode</option>
+                <% for( let index = 0; index < database.length; index++ ) { %>
+                    <option value="<%= database[index].nama_periode %>" ><%= database[index].nama_periode %></option>
+                <% } %>
+            </select>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Jabatan</label>
             <input type="Text" class="form-control" id="jabatan" placeholder="jabatan" name="jabatan">
         </div>
-        <div>
+        <div class="btn-sbmt">
             <button type="submit" value="Submit">submit</button>
         </div>
     </form>

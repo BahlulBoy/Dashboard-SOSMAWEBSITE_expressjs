@@ -46,7 +46,13 @@ app.get('/add', (req, res) => {
     var page = req.query.page;
     switch (page) {
         case "anggota":
-            res.render("./add_page/anggota", {layout: "./layout/errorlayout"});
+            var data = pool.getConnection((err, connection) => {
+                connection.query("SELECT nama_periode FROM periode", function (err, result, field) {
+                  if (err) throw err;
+                  res.render("./add_page/anggota", {database : result, layout: "./layout/errorlayout"});
+                  connection.release();
+                })
+            })
             break;
         case "berita":
             res.render("./add_page/berita", {layout: "./layout/errorlayout"});
@@ -66,13 +72,19 @@ app.get('/add', (req, res) => {
 })
 
 app.post('/add_user', urlencodedParser, (req, res) => {
-    var nim = req.body.nim;
-    var nama = req.body.nama;
-    var b = req.body.tanggal_lahir;
-    var tanggal_lahir = b.split("-").reverse().join("-");
-    var prodi = req.body.prodi;
-    var periode = req.body.periode;
-    var jabatan = req.body.jabatan;
+    var nim = (req.body.nim).toString();
+    var nama = (req.body.nama).toString();
+    var tanggal_lahir = (req.body.tanggal_lahir);
+    var prodi = (req.body.prodi).toString();
+    var periode = (req.body.periode).toString();
+    var jabatan = (req.body.jabatan).toString();
+    var data = pool.getConnection((err, connection) => {
+        connection.query("INSERT INTO `anggota` (`nim`, `nama`, `tanggal_lahir`, `prodi`, `periode`, `jabatan`) VALUES " + "("  + "'"+ nim +"'" + ", " + "'"+ nama +"'" + ", " + "'"+ tanggal_lahir +"'" + ", " + "'"+ prodi +"'" + ", " + "(SELECT id_periode FROM periode WHERE nama_periode="+ "'" + periode + "'" + ")" + ", " + "'"+ jabatan +"'" +")" , function (err, result, field) {      
+            if (err) throw err;      
+            res.redirect("/anggota");
+            connection.release();    
+        })
+    })
 })
 
 app.use('/', (req, res) => {

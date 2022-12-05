@@ -16,7 +16,7 @@ body{
 .add-page{
     position: absolute;
     background-color: var(--page-backround-color);
-    margin-top: 2%;
+    margin-top: 1.1%;
     margin-bottom: 40px;
     width: 55%;
     height: auto;
@@ -45,10 +45,19 @@ body{
     padding: 0 3%;
 }
 
+
+.btn-sbmt{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-sbmt button{
+    background-color: var(--btn-background);
+    border-style: none;
+}
+
 .form-add button{
     margin-bottom: 25px;
     margin-right: 3%;
-    background-color: var(--btn-background);
     padding: 5px 30px;
     color: rgb(241, 241, 255);
     border-radius: 15px;
