@@ -13,7 +13,7 @@ app.use(jsonParser);
 
 app.set('view engine', 'ejs');
 app.set('layout', './layout/layout');
-var urlencodedParser = bodyparser.urlencoded({ extended: false })
+var urlencodedParser = bodyparser.urlencoded({ extended: true })
 
 const pool = mysql.createPool({
     host        : 'localhost',
@@ -71,6 +71,9 @@ app.get('/add', (req, res) => {
     }
 })
 
+app.post('/add_berita', urlencodedParser, (req, res) => {
+})
+
 app.post('/add_user', urlencodedParser, (req, res) => {
     var nim = (req.body.nim).toString();
     var nama = (req.body.nama).toString();
@@ -86,6 +89,7 @@ app.post('/add_user', urlencodedParser, (req, res) => {
         })
     })
 })
+
 
 app.use('/', (req, res) => {
     res.render('error', { layout : "./layout/errorlayout" });

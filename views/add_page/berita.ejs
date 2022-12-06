@@ -1,34 +1,22 @@
 <div class="add-page">
     <div class="titleAndbutton">
-        <h1 class="title">Add Anggota</h1>
-        <a href="/anggota">Back</a>
+        <h1 class="title">Add Berita</h1>
+        <a href="/berita">Back</a>
     </div>
-    <form class="form-add" action="/add_user" method="POST">
+    <form class="form-add" action="/add_berita" method="POST">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">NIM</label>
-            <input type="number" class="form-control" id="nim" placeholder="Nomer NIM" name="nim">
+            <label for="exampleFormControlInput1" class="form-label">Judul Berita</label>
+            <input type="text" class="form-control" id="judul_berita" placeholder="Judul Berita" name="judul_berita">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Isi Berita</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="isi_berita" rows="3"></textarea>
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nama Anggota</label>
-            <input type="text" class="form-control" id="nama" placeholder="Nama Anggota" name="nama">
+            <label for="exampleFormControlInput1" class="form-label">Penulis</label>
+            <input type="text" class="form-control" id="penulis" placeholder="Penulis" name="penulis">
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
-            <input type="date" class="form-control" id="tanggal_lahir" placeholder="isikan Tanggal Lahir" name="tanggal_lahir">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Prodi</label>
-            <input type="text" class="form-control" id="prodi" placeholder="Prodi" name="prodi">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Periode</label>
-            <input type="text" class="form-control" id="periode" placeholder="Periode" name="periode">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Jabatan</label>
-            <input type="Text" class="form-control" id="jabatan" placeholder="jabatan" name="jabatan">
-        </div>
-        <div>
+        <div class="btn-sbmt">
             <button type="submit" value="Submit">submit</button>
         </div>
     </form>

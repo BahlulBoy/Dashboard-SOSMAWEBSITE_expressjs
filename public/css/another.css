@@ -45,6 +45,9 @@ body{
     padding: 0 3%;
 }
 
+.form-group{
+    margin-bottom: 10px;
+}
 
 .btn-sbmt{
     display: flex;
