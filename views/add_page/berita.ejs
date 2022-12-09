@@ -10,7 +10,8 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Isi Berita</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" name="isi_berita" rows="3"></textarea>
+            <textarea id="editor" class="form-group" name="isi_berita">
+            </textarea>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Penulis</label>
@@ -21,3 +22,10 @@
         </div>
     </form>
 </div>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>

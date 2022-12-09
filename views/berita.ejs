@@ -20,7 +20,12 @@
                     <div class="database-berita-value">
                         <div class="berita-id"><%= database[index].id_berita %></div>
                         <div class="berita-title"><%= database[index].judul_berita %></div>
-                        <div class="berita-value"><%= database[index].isi_berita %></div>
+                        <% if (database[index].isi_berita.length > 300) { %>
+                        <% var lo = (database[index].isi_berita).toString().substring(0, 300) + "..."; %> 
+                        <% } else { %>
+                        <% var lo = (database[index].isi_berita) %>
+                        <% } %>  
+                        <div class="berita-value"><%= lo %></div>
                         <div class="berita-penulis"><%= database[index].nama %> </div>
                         <div class="edit-berita">
                             <a><i class="bi bi-trash"></i></a>
