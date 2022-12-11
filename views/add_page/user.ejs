@@ -3,32 +3,28 @@
         <h1 class="title">Add Anggota</h1>
         <a href="/anggota">Back</a>
     </div>
-    <form class="form-add" action="/add_user" method="POST">
+    <form class="form-add" action="/add_user" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">NIM</label>
-            <input type="number" class="form-control" id="nim" placeholder="Nomer NIM" name="nim">
+            <label for="exampleFormControlInput1" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" placeholder="Nama user" name="nama">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nama Anggota</label>
-            <input type="text" class="form-control" id="nama" placeholder="Nama Anggota" name="nama">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Username" name="username">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
-            <input type="date" class="form-control" id="tanggal_lahir" placeholder="isikan Tanggal Lahir" name="tanggal_lahir">
+            <label for="exampleFormControlInput1" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="E-mail" name="email">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Prodi</label>
-            <input type="text" class="form-control" id="prodi" placeholder="Prodi" name="prodi">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="password" name="password">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Periode</label>
-            <input type="text" class="form-control" id="periode" placeholder="Periode" name="periode">
+            <label for="exampleFormControlInput1" class="form-label">Foto Profile</label>
+            <input type="file" class="form-control" id="profile" name="image">
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Jabatan</label>
-            <input type="Text" class="form-control" id="jabatan" placeholder="jabatan" name="jabatan">
-        </div>
-        <div>
+        <div class="btn-sbmt">
             <button type="submit" value="Submit">submit</button>
         </div>
     </form>

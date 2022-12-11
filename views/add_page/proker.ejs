@@ -3,33 +3,50 @@
         <h1 class="title">Add Proker</h1>
         <a href="/anggota">Back</a>
     </div>
-    <form class="form-add" action="/add_user" method="POST">
+    <form class="form-add" action="/add_proker" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nama Proker</label>
-            <input type="text" class="form-control" id="nim" placeholder="Nomer NIM" name="nim">
+            <input type="text" class="form-control" id="nim" placeholder="Judul Proker" name="nama_proker">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">tanggal</label>
-            <input type="date" class="form-control" id="nama" placeholder="Nama Anggota" name="nama">
+            <label for="exampleFormControlInput1" class="form-label">Tanggal</label>
+            <input type="date" class="form-control" id="nama" placeholder="Tanggal" name="tanggal">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">lokasi</label>
-            <input type="text" class="form-control" id="tanggal_lahir" placeholder="isikan Tanggal Lahir" name="tanggal_lahir">
+            <label for="exampleFormControlInput1" class="form-label">Lokasi</label>
+            <input type="text" class="form-control" id="tanggal_lahir" placeholder="Lokasi Proker" name="lokasi_proker">
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">deskripsi</label>
-            <textarea class="form-control" id="prodi" placeholder="Prodi" name="prodi"></textarea>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Deskripsi</label>
+            <textarea id="editor" class="form-control" name="deskripsi">
+            </textarea>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Penanggung Jawab</label>
-            <input type="text" class="form-control" id="periode" placeholder="Periode" name="periode">
+            <input type="text" class="form-control" id="periode" placeholder="nama penanggung jawab" name="penanggung_jawab">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Dokumentasi</label>
-            <input type="file" class="form-control" id="jabatan" placeholder="jabatan" name="jabatan">
+            <label for="exampleFormControlInput1" class="form-label">Foto Dokumentasi</label>
+            <input type="file" class="form-control" id="jabatan" placeholder="foto dokumentasi" name="image">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Periode</label>
+            <select class="form-select" aria-label="Default select example" id="periode" name="periode">
+                <option selected>Pilih Periode</option>
+                <% for( let index = 0; index < database.length; index++ ) { %>
+                    <option value="<%= database[index].nama_periode %>" ><%= database[index].nama_periode %></option>
+                <% } %>
+            </select>
         </div>
         <div class="btn-sbmt">
             <button type="submit" value="Submit">submit</button>
         </div>
     </form>
 </div>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
