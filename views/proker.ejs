@@ -5,7 +5,7 @@
         </div>
         <div class="content-page">
             <div class="option-page">
-                <a href="/add?page=proker" class="add-btn">Add proker</a>
+                <a href="/admin/proker/add_proker" class="add-btn">Add proker</a>
             </div>
             <div class="database-proker">
                 <div class="database-proker-title">
@@ -24,7 +24,12 @@
                         <div class="proker-nama"><%= database[index].nama_proker %></div>
                         <div class="proker-tanggal"><%= database[index].tanggal %></div>
                         <div class="proker-lokasi"><%= database[index].lokasi %></div>
-                        <div class="proker-deskripsi"><%= database[index].deskripsi %></div>
+                        <% if (database[index].deskripsi.length > 200) { %>
+                        <% var lo = (database[index].deskripsi).toString().substring(0, 200) + "..."; %> 
+                        <% } else { %>
+                        <% var lo = (database[index].deskripsi) %>
+                        <% } %> 
+                        <div class="proker-deskripsi"><%= lo %></div>
                         <div class="proker-penanggung-jawab"><%= database[index].nama %></div>
                         <div class="proker-dokumentasi"><%= database[index].dokumentasi %></div>
                         <div class="proker-periode"><%= database[index].nama_periode %></div>
