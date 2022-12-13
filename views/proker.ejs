@@ -5,9 +5,11 @@
         </div>
         <div class="content-page">
             <div class="option-page">
-                <div class="alert alert-primary" role="alert">
-                    A simple primary alert—check it out!
-                </div>
+                <% if (status != '') { %>
+                    <div class="alert alert-primary" role="alert">
+                        <%= status %> 
+                    </div>
+                <% } %>
                 <a href="/admin/proker/add_proker" class="add-btn">Add proker</a>
             </div>
             <div class="database-proker">

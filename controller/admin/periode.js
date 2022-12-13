@@ -5,9 +5,9 @@ module.exports = {
         database.getConnection((err, connection) => {
             connection.query('SELECT * FROM periode', function (err, result, field) {
               if (err) {
-                res.redirect('/admin/periode?status=error')
+                res.redirect('/admin/periode')
               };
-              res.render('periode', {database : result});
+              res.render('periode', {database : result, status : req.flash('status')});
               connection.release();
             })
         })
@@ -21,8 +21,10 @@ module.exports = {
         var data = database.getConnection((err, connection) => {
             connection.query("INSERT INTO `periode` (`tahun`, `nama_periode`) VALUES " + "("  + "'"+ tahun +"'" + ", " + "'"+ nama_periode  +"'" +")", function (err, result, field) {      
                 if (err) {
-                    res.redirect('/admin/periode?status=error')
+                    req.flash('status', err.name)
+                    res.redirect('/admin/periode')
                 };
+                req.flash('status', 'database berhasil dibuat')
                 res.redirect("/admin/periode");
                 connection.release();    
             })

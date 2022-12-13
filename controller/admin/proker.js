@@ -5,7 +5,7 @@ module.exports = {
         database.getConnection((err, connection) => {
             connection.query('SELECT *, nama, nama_periode FROM proker INNER JOIN anggota ON proker.penanggungjawab = anggota.nim INNER JOIN periode ON proker.periode = periode.id_periode', function (err, result, field) {
               if (err) throw err;
-              res.render('proker', {database : result});
+              res.render('proker', {database : result , status : req.flash('status')});
               connection.release();
             })
         })
@@ -30,8 +30,12 @@ module.exports = {
         var periode = (req.body.periode).toString();
         var data = database.getConnection((err, connection) => {
             connection.query("INSERT INTO `proker` (`nama_proker`, `tanggal`, `lokasi`, `deskripsi`, `penanggungjawab`, `dokumentasi` , `periode`) VALUES " + "("  + "'"+ nama_proker +"'" + ", " + "'"+ tanggal_proker +"'" + ", " + "'"+ lokasi +"'" + ", " + "'"+ deskripsi +"'" + ", " + "(SELECT nim FROM anggota WHERE nama="+ "'" + penanggung_jawab + "'" + ")" + ", " + "'" + foto_dokumentasi + "'" +  ", " + "(SELECT id_periode FROM periode WHERE nama_periode="+ "'" + periode + "'" + ")" + ")" , function (err, result, field) {      
-                if (err) throw err;      
+                if (err) {
+                    req.flash('status', err.name)
+                    res.redirect('/admin/proker');
+                };      
                 image.mv( process.cwd() + "/public/img/dokumentasi/" + foto_dokumentasi);
+                req.flash('status', 'database berhasil dibuat')
                 res.redirect("/admin/proker");
                 connection.release();    
             })

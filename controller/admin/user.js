@@ -5,7 +5,7 @@ module.exports = {
         database.getConnection((err, connection) => {
             connection.query('SELECT * FROM user', function (err, result, field) {
               if (err) throw err;
-              res.render('user', {database : result});
+              res.render('user', {database : result, status : req.flash('status')});
               connection.release();
             })
         })
@@ -22,8 +22,12 @@ module.exports = {
     var profile = image.name;
     database.getConnection((err, connection) => {
         connection.query("INSERT INTO `user` (`nama`, `username`, `email`, `password`, `foto`) VALUES " + "("  + "'"+ nama +"'" + ", " + "'"+ username +"'" + ", " + "'"+ email +"'" + ", " + "MD5(" + "'"+ password +"'" + ")" + ", " + "'"+ profile +"'" +")" , function (err, result, field) {      
-            if (err) throw err;
+            if (err) {
+                req.flash('status', err.name)
+                res.redirect('/admin/user')
+            };
             image.mv(process.cwd() + "/public/img/profile/" + profile);
+            req.flash('status', 'user telah ditambahkan')
             res.redirect("/admin/user");
             connection.release();
         })
