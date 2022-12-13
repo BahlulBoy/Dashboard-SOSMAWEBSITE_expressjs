@@ -5,6 +5,11 @@
         </div>
         <div class="content-page">
             <div class="option-page">
+                <% if (status != '') { %>
+                    <div class="alert alert-primary" role="alert">
+                        <%= status %> 
+                    </div>
+                <% } %>
                 <a href="/admin/berita/add_berita" class="add-btn">Add Berita</a>
             </div>
             <div class="database-berita">

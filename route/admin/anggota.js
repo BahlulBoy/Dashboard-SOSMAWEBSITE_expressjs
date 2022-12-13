@@ -1,5 +1,5 @@
-const route = require("express").Router();
-const bodyparser = require("body-parser");
+const route = require("express").Router()
+const bodyparser = require("body-parser")
 const anggota_controller = require("../../controller/admin/anggota");
 
 var urlencodedParser = bodyparser.urlencoded({ extended: false });

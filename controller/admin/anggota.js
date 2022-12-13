@@ -5,7 +5,7 @@ module.exports = {
         database.getConnection((err, connection) => {
             connection.query('SELECT *, tahun FROM anggota INNER JOIN periode ON anggota.periode = periode.id_periode', function (err, result, field) {
               if (err) throw err;
-              res.render('anggota', {database : result});
+              res.render('anggota', {database : result, status : req.flash('status')});
               connection.release();
             })
         })
@@ -28,7 +28,11 @@ module.exports = {
         var jabatan = (req.body.jabatan).toString();
         var data = database.getConnection((err, connection) => {
             connection.query("INSERT INTO `anggota` (`nim`, `nama`, `tanggal_lahir`, `prodi`, `periode`, `jabatan`) VALUES " + "("  + "'"+ nim +"'" + ", " + "'"+ nama +"'" + ", " + "'"+ tanggal_lahir +"'" + ", " + "'"+ prodi +"'" + ", " + "(SELECT id_periode FROM periode WHERE nama_periode="+ "'" + periode + "'" + ")" + ", " + "'"+ jabatan +"'" +")" , function (err, result, field) {      
-                if (err) throw err;      
+                if (err){
+                    req.flash('status', err.name)
+                    res.redirect('/admin/anggota')
+                };      
+                req.flash('status', 'database berhasil di buat');
                 res.redirect("/admin/anggota");
                 connection.release();    
             })

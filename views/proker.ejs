@@ -5,6 +5,9 @@
         </div>
         <div class="content-page">
             <div class="option-page">
+                <div class="alert alert-primary" role="alert">
+                    A simple primary alert—check it out!
+                </div>
                 <a href="/admin/proker/add_proker" class="add-btn">Add proker</a>
             </div>
             <div class="database-proker">
@@ -34,7 +37,7 @@
                         <div class="proker-dokumentasi"><%= database[index].dokumentasi %></div>
                         <div class="proker-periode"><%= database[index].nama_periode %></div>
                         <div class="edit-proker">
-                            <a href="/proker/trash?id=<%= database[index].nama_proker %>"><i class="bi bi-trash"></i></a> <a><i class="bi bi-pencil-square"></i></a>
+                            <a><i class="bi bi-trash"></i></a> <a><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>
