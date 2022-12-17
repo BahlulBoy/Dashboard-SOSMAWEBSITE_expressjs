@@ -9,8 +9,42 @@
             <input type="text" class="form-control" id="nim" placeholder="Judul Proker" name="nama_proker">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Tanggal</label>
-            <input type="date" class="form-control" id="nama" placeholder="Tanggal" name="tanggal">
+            <label for="exampleFormControlInput1" class="form-label">Kegiatan Dimulai</label>
+            <input type="number" class="form-control" id="tanggal_lahir" placeholder="Tanggal" name="mtanggal" min="1" max="31" required>
+            <select class="form-select" aria-label="Default select example" id="Jabatan" name="mbulan" required>
+                <option selected>Bulan</option>
+                    <option value="Januari" >Januari</option>
+                    <option value="Februari" >Februari</option>
+                    <option value="Maret" >Maret</option>
+                    <option value="April" >April</option>
+                    <option value="Mei" >Mei</option>
+                    <option value="Juni" >Juni</option>
+                    <option value="Juli" >Juli</option>
+                    <option value="Agustus" >Agustus</option>
+                    <option value="Oktober" >Oktober</option>
+                    <option value="November" >November</option>
+                    <option value="Desember" >Desember</option>
+            </select>
+            <input type="number" class="form-control" id="tanggal_lahir" placeholder="Tahun" name="mtahun" min="1900" max="2100" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Kegiatan Berakhir</label>
+            <input type="number" class="form-control" id="tanggal_lahir" placeholder="Tanggal" name="stanggal" min="1" max="31" required>
+            <select class="form-select" aria-label="Default select example" id="Jabatan" name="sbulan" required>
+                <option selected>Bulan</option>
+                    <option value="Januari" >Januari</option>
+                    <option value="Februari" >Februari</option>
+                    <option value="Maret" >Maret</option>
+                    <option value="April" >April</option>
+                    <option value="Mei" >Mei</option>
+                    <option value="Juni" >Juni</option>
+                    <option value="Juli" >Juli</option>
+                    <option value="Agustus" >Agustus</option>
+                    <option value="Oktober" >Oktober</option>
+                    <option value="November" >November</option>
+                    <option value="Desember" >Desember</option>
+            </select>
+            <input type="number" class="form-control" id="tanggal_lahir" placeholder="Tahun" name="stahun" min="1900" max="2100" required>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Lokasi</label>
@@ -22,8 +56,16 @@
             </textarea>
         </div>
         <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Bidang</label>
+            <select class="form-select" aria-label="Default select example" id="Jabatan" name="bidang" required>
+                <option selected>Bidang</option>
+                    <option value="Pengabdian" >Pengabdian</option>
+                    <option value="Pendidikan" >Pendidikan</option>
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Penanggung Jawab</label>
-            <input type="text" class="form-control" id="periode" placeholder="nama penanggung jawab" name="penanggung_jawab">
+            <input type="text" class="form-control" id="penanggung_jawab" placeholder="Lokasi Proker" name="penanggung_jawab">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Foto Dokumentasi</label>

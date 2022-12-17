@@ -26,10 +26,10 @@
                         <div class="user-nama"><%= database[index].nama %></div>
                         <div class="user-email"><%= database[index].email %></div>
                         <div class="user-username"><%= database[index].username %></div>
-                        <div class="user-foto"><%= database[index].foto %></div>
+                        <div class="user-foto"><%= database[index].foto_user %></div>
                         <div class="edit-user">
-                            <a><i class="bi bi-trash"></i></a>
-                            <a><i class="bi bi-pencil-square"></i></a>
+                            <a href="/admin/user/hapus?id=<%= database[index].nama %> "><i class="bi bi-trash"></i></a>
+                            <a href="/admin/user/edit_user?id=<%= database[index].nama %> "><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>

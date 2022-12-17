@@ -20,6 +20,8 @@
                     <div class="anggota-prodi">Prodi</div>
                     <div class="anggota-periode">Periode</div>
                     <div class="anggota-jabatan">Jabatan</div>
+                    <div class="anggota-nama-jabatan">Nama Jabatan</div>
+                    <div class="anggota-foto">foto</div>
                     <div class="edit-anggota"></div>
                 </div>
                 <div class="database-anggota-value-store">
@@ -31,9 +33,11 @@
                         <div class="anggota-prodi"><%= database[index].prodi %></div>
                         <div class="anggota-periode"><%= database[index].tahun %></div>
                         <div class="anggota-jabatan"><%= database[index].jabatan %> </div>
+                        <div class="anggota-nama-jabatan"><%= database[index].nama_jabatan %> </div>
+                        <div class="anggota-foto"><%= database[index].foto %> </div>
                         <div class="edit-anggota">
-                            <a><i class="bi bi-trash"></i></a>
-                            <a><i class="bi bi-pencil-square"></i></a>
+                            <a href="/admin/anggota/hapus?id=<%= database[index].nama %>"><i class="bi bi-trash"></i></a>
+                            <a href="/admin/anggota/edit_anggota?id=<%= database[index].nama %>"><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>

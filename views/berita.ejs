@@ -17,6 +17,7 @@
                     <div class="berita-id">Id</div>
                     <div class="berita-title">Judul Berita</div>
                     <div class="berita-value-title">Isi Berita</div>
+                    <div class="berita-tanggal">Tanggal Berita</div>
                     <div class="berita-penulis">Penulis</div>
                     <div class="edit-berita"></div>
                 </div>
@@ -31,10 +32,11 @@
                         <% var lo = (database[index].isi_berita) %>
                         <% } %>  
                         <div class="berita-value"><%= lo %></div>
+                        <div class="berita-tanggal"><%= database[index].tanggal_berita %> </div>
                         <div class="berita-penulis"><%= database[index].nama %> </div>
                         <div class="edit-berita">
-                            <a><i class="bi bi-trash"></i></a>
-                            <a><i class="bi bi-pencil-square"></i></a>
+                            <a href="/admin/berita/hapus?id=<%= database[index].judul_berita %> "><i class="bi bi-trash"></i></a>
+                            <a href="/admin/berita/edit?id=<%= database[index].id_berita %> "><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>

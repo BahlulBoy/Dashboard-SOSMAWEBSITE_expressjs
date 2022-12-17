@@ -11,6 +11,9 @@ app.use(upload());
 var urlencodedParser = bodyparser.urlencoded({ extended: false })
 
 route.post('/add_proker', urlencodedParser, proker_control.addproker)
+route.post('/edit_proker', urlencodedParser, proker_control.editProker)
+route.get('/edit', proker_control.formEditProker)
+route.get('/hapus', proker_control.hapusProker)
 route.get('/add_proker', proker_control.formproker)
 route.get('/', proker_control.proker)
 

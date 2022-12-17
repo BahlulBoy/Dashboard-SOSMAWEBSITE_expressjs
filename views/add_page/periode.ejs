@@ -6,7 +6,7 @@
     <form class="form-add" action="/admin/periode/addperiode" method="POST">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Tahun</label>
-            <input type="date" class="form-control" id="tahun" placeholder="isikan Tahun" name="tahun">
+            <input type="number" min="1900" max="2050" class="form-control" id="tahun" placeholder="isikan Tahun" name="tahun">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nama Periode</label>

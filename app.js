@@ -4,7 +4,6 @@ const mysql = require("mysql")
 const upload = require("express-fileupload")
 const session = require("express-session")
 const bodyparser = require("body-parser")
-const con = require("./database_connect")
 const flash = require("connect-flash")
 const port = process.env.PORT || 5000
 
@@ -42,9 +41,9 @@ app.use('/admin', (req, res, next) => {
         res.redirect('/berita')
     }
 }, require('./route/admin/admin'));
-app.use('/', (req, res) => {
-    res.render('error', { layout : "./layout/errorlayout" });
-})
+app.use('/', 
+    require('./route/tampilan/index')
+)
 // routing
 
 

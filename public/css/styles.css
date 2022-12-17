@@ -251,11 +251,11 @@ hr{
 
 .anggota-nim{
     text-align: center;
-    width: 15%;
+    width: 12%;
 }
 .anggota-nama{
     text-align: center;
-    width: 20%;
+    width: 13%;
 }
 .anggota-tanggal-lahir{
     text-align: center;
@@ -263,13 +263,25 @@ hr{
 }
 .anggota-prodi{
     text-align: center;
-    width: 20%;
+    width: 10%;
 }
 .anggota-periode{
     text-align: center;
     width: 10%;
 }
 .anggota-jabatan{
+    text-align: center;
+    width: 10%;
+}
+.anggota-jabatan{
+    text-align: center;
+    width: 10%;
+}
+.anggota-nama-jabatan{
+    text-align: center;
+    width: 10%;
+}
+.anggota-foto{
     text-align: center;
     width: 10%;
 }
@@ -340,17 +352,21 @@ hr{
 }
 .berita-value{
     text-align: justify;
-    width: 38%;
+    width: 30%;
 }
 
 .berita-value-title{
     text-align: center;
-    width: 33%;
+    width: 30%;
 }
 
 .berita-penulis{
     text-align: center;
-    width: 20%;
+    width: 15%;
+}
+.berita-tanggal{
+    text-align: center;
+    width: 13%;
 }
 .edit-berita{
     color: var(--sidebar-fontcolor);
@@ -578,7 +594,7 @@ hr{
 }
 .proker-lokasi{
     text-align: center;
-    width: 15%;
+    width: 7%;
 }
 .proker-deskripsi{
     text-align: center;
@@ -586,9 +602,13 @@ hr{
 }
 .proker-penanggung-jawab{
     text-align: center;
-    width: 15%;
+    width: 13%;
 }
 .proker-dokumentasi{
+    text-align: center;
+    width: 10%;
+}
+.proker-waktu{
     text-align: center;
     width: 10%;
 }

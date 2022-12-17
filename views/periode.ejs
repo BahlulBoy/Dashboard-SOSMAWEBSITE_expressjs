@@ -26,8 +26,8 @@
                         <div class="periode-tahun"><%= database[index].tahun %></div>
                         <div class="periode-prodi"><%= database[index].nama_periode %></div>
                         <div class="edit-periode">
-                            <a><i class="bi bi-trash"></i></a>
-                            <a><i class="bi bi-pencil-square"></i></a>
+                            <a href="/admin/periode/hapus?id=<%= database[index].nama_periode %> "><i class="bi bi-trash"></i></a>
+                            <a href="/admin/periode/edit?id=<%= database[index].id_periode %> "><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>

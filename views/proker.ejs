@@ -18,6 +18,7 @@
                     <div class="proker-tanggal">tanggal</div>
                     <div class="proker-lokasi">lokasi</div>
                     <div class="proker-deskripsi">deskripsi</div>
+                    <div class="proker-waktu">waktu proker</div>
                     <div class="proker-penanggung-jawab">penanggung jawab</div>
                     <div class="proker-dokumentasi">dokumentasi</div>
                     <div class="proker-periode">periode</div>
@@ -35,11 +36,12 @@
                         <% var lo = (database[index].deskripsi) %>
                         <% } %> 
                         <div class="proker-deskripsi"><%= lo %></div>
-                        <div class="proker-penanggung-jawab"><%= database[index].nama %></div>
+                        <div class="proker-waktu"><%= database[index].tanggal %> </div>
+                        <div class="proker-penanggung-jawab"><%= database[index].penanggungjawab %></div>
                         <div class="proker-dokumentasi"><%= database[index].dokumentasi %></div>
                         <div class="proker-periode"><%= database[index].nama_periode %></div>
                         <div class="edit-proker">
-                            <a><i class="bi bi-trash"></i></a> <a><i class="bi bi-pencil-square"></i></a>
+                            <a href="/admin/proker/hapus?id=<%= database[index].nama_proker %>"><i class="bi bi-trash"></i></a> <a href="/admin/proker/edit?id=<%= database[index].nama_proker %>"><i class="bi bi-pencil-square"></i></a>
                         </div>
                     </div>
                     <% } %>
