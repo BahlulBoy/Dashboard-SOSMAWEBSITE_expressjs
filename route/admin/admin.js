@@ -6,8 +6,9 @@ route.use('/berita', require('./berita'))
 route.use('/periode', require('./periode'))
 route.use('/proker', require('./proker'))
 route.use('/user', require('./user'))
+route.use('/logout', require('./logout'))
 route.use('/', (req, res) => {
-    res.send("haloo")
+    res.redirect('/admin/profile')
 })
 
 module.exports = route;

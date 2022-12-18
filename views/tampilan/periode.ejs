@@ -52,14 +52,15 @@
         <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="row g-4 class">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                            <h5 class="mb-3">Periode 2022</h5>
-                            <p class="m-0" align="center">Kabinet Saskaragama
-                            </p>
+                    <% for( let index = 0; index < database.length; index++ ) { %>
+                        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item bg-light rounded text-center p-4">
+                                <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                                <h5 class="mb-3">Periode <%= database[index].tahun %> </h5>
+                                <p class="m-0" align="center">Kabinet <%= database[index].nama_periode %></p>
+                            </div>
                         </div>
-                    </div>
+                    <% } %>
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-item bg-light rounded text-center p-4">
                             <i class="fa fa-3x fa-search text-primary mb-4"></i>

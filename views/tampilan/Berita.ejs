@@ -2,7 +2,7 @@
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
                 <img src="img/Logo Sosma.png" alt="Logo">
-                <h1 class="m-0">sosmavoks</h1> 
+                <h1 class="m-0">Sosmavoks</h1> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -47,41 +47,21 @@
         </div>
         <!-- Navbar & Hero End -->
 
-
         <!-- Feature Start -->
         <div class="container-xxl py-5">
             <div class="container py-5 px-lg-5">
                 <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                            <h5 class="mb-3">Kementrian Sosma BEM Fakultas Pertanian x Kementrian Sosma BEM Fakultas Vokasi</h5>
-                            <h6 class="mb-3">Author’s : Yusuf Ardiansyah</h6> 
-                            <p class="m-0" align="justify">Selasa, 22 November 2022, Sosma BEM Fakultas Pertanian UB melakukan Studi Banding dengan Sosma BEM Fakultas Vokasi secara offline di coffeshop Ruang Rindu.
-                                Acara tersebut dilaksanakan guna untuk saling bertukar pikiran dan sharing segala hal tentang program kerja masing-masing sosma. Tak hanya itu, acara juga diselingi kegiatan
-                                games yang cukup meriah dan mempererat hubungan kedua belah sosma. Harapannya dengan diadakannya acara ini dapat mempererat dan mempersatu hubungan Sosma antar fakultas di lingkungan 
-                                Universitas Brawijaya.
-                            </p>
+                    <% for( let index = 0; index < database.length; index++ ) { %>
+                        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="feature-item bg-light rounded text-center p-4">
+                                <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                                <h5 class="mb-3"><%= database[index].judul_berita %> </h5>
+                                <h6 class="mb-3">Author’s : <%= database[index].nama %></h6>
+                                <p><%= database[index].tanggal_berita %>, </p>
+                                <%- database[index].isi_berita %>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-search text-primary mb-4"></i>
-                            <h5 class="mb-3">Penutupan Vokasi Mengajar di SDN 4 Gunungsari</h5>
-                            <p class="m-0" align="justify">Sabtu, 12 November 2022, Sosma BEM Fakultas Vokasi mengadakan penutupan kegiatan Vokasi Mengajar yang telah dilaksanakan selama 3 hari di SDN 4 Gunungsari. Rangkaian kegiatan tersebut ditutup dengan acara sosialisasi tentang bahaya narkoba, penampilan yel-yel, dan penampilan
-                                minat bakat. Kegiatan diikuti dengan sangat antusias oleh siswa SDN 4 Gunungsari mulai dari kelas 1 hingga kelas 6. Kelompok dengan penampilan minat bakat terbaik mendapatkan sedikit hadiah dari pihak panitia sehingga memberikan mereka semangat untuk terus belajar.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded text-center p-4">
-                            <i class="fa fa-3x fa-search text-primary mb-4"></i>
-                            <h5 class="mb-3">Penutupan Vokasi Mengajar di SDN 4 Gunungsari</h5>
-                            <p class="m-0" align="justify">Sabtu, 12 November 2022, Sosma BEM Fakultas Vokasi mengadakan penutupan kegiatan Vokasi Mengajar yang telah dilaksanakan selama 3 hari di SDN 4 Gunungsari. Rangkaian kegiatan tersebut ditutup dengan acara sosialisasi tentang bahaya narkoba, penampilan yel-yel, dan penampilan
-                                minat bakat. Kegiatan diikuti dengan sangat antusias oleh siswa SDN 4 Gunungsari mulai dari kelas 1 hingga kelas 6. Kelompok dengan penampilan minat bakat terbaik mendapatkan sedikit hadiah dari pihak panitia sehingga memberikan mereka semangat untuk terus belajar.
-                            </p>
-                        </div>
-                    </div>
+                    <% } %>
                 </div>
             </div>
         </div>

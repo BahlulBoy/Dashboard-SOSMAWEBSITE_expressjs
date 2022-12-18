@@ -18,7 +18,7 @@
             <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
             <input type="number" class="form-control" id="tanggal_lahir" placeholder="Tanggal" name="tanggal" min="1" max="31" value="<%= nome[0] %>" required>
             <select class="form-select" aria-label="Default select example" id="Jabatan" name="bulan" required>
-                <option selected>Bulan</option>
+                <option value="<%= nome[1] %> " selected><%= nome[1] %> </option>
                     <option value="Januari" >Januari</option>
                     <option value="Februari" >Februari</option>
                     <option value="Maret" >Maret</option>
@@ -27,6 +27,7 @@
                     <option value="Juni" >Juni</option>
                     <option value="Juli" >Juli</option>
                     <option value="Agustus" >Agustus</option>
+                    <option value="September" >September</option>
                     <option value="Oktober" >Oktober</option>
                     <option value="November" >November</option>
                     <option value="Desember" >Desember</option>

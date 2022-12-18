@@ -34,13 +34,22 @@ const pool = mysql.createPool({
   })
 
 app.use('/admin', (req, res, next) => {
-    if (true) {
+    if (req.session.loginid) {
         next()
         return
     } else {
-        res.redirect('/berita')
+        res.redirect('/login')
     }
 }, require('./route/admin/admin'));
+app.use('/login', (req, res, next) => {
+    if (!req.session.loginid) {
+        next()
+        return
+    } else {
+        res.redirect('/admin');
+    }
+},require('./route/login/login') 
+);
 app.use('/', 
     require('./route/tampilan/index')
 )

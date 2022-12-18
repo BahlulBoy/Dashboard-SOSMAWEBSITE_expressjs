@@ -168,6 +168,8 @@ hr{
 }
 /* content main */
 
+
+
 /* profile page css */
 .profile-page{
     background-color: #f9fbff;
@@ -191,6 +193,10 @@ hr{
 }
 
 .profile-pict .img{
+    width: inherit;
+    border-radius: 100px;
+}
+.profile-pict .img img{
     background-color: blue;
     height: 150px;
     width: 150px;

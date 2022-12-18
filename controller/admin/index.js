@@ -9,5 +9,6 @@ module.exports = {
     profile,
     anggota,
     proker,
-    user
+    user,
+    logout
 }

@@ -2,7 +2,6 @@ const express = require('express')
 const route = require("express").Router()
 const bodyparser = require("body-parser")
 const anggota_controller = require("../../controller/admin/anggota")
-const fs = require("fs");
 const upload = require("express-fileupload")
 
 const app = express()

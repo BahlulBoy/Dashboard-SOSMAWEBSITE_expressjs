@@ -601,9 +601,12 @@ h6,
 }
 
 .team { 
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .container-xxl{
     max-width:inherit;
+}
+.margin-bot{
+    margin-bottom: 20px;
 }

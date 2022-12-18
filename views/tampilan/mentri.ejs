@@ -56,21 +56,23 @@
                     <h1 class="text-center mb-5">Menteri Sosial Masyarakat BEM Fakultas UB Periode 2022</h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item bg-light rounded">
-                            <div class="text-center border-bottom p-4">
-                                <img class ="img-fluid rounded-circle mb-4" src="img/Staff Ahli-BPH 22/ilma.png" alt="">
-                                <h5>Aldenia Luthfian Ilma</h5>
-                                <span>Menteri Sosma</span>
-                            </div>
-                            <div class="d-flex justify-content-center p-4">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <% for( let index = 0; index < database.length; index++ ) { %>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="team-item bg-light rounded">
+                                <div class="text-center border-bottom p-4">
+                                    <img class ="img-fluid rounded-circle mb-4" src="img/foto anggota/<%= database[index].foto %> " alt="">
+                                    <h5><%= database[index].nama %> </h5>
+                                    <span><%= database[index].nama_jabatan %> </span>
+                                </div>
+                                <div class="d-flex justify-content-center p-4">
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <% } %>
                 </div>
             </div>
          </div>

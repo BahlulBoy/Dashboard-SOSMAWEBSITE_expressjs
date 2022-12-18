@@ -5,14 +5,14 @@
             </div>
             <div class="profile-page">
                 <div class="profile-pict">
-                    <div class="img"></div>
+                    <div class="img"><img src="/img/profile/<%= database[0].foto_user %> " alt=""></div>
                 </div>
                 <div class="desc-profile">
                     <div class="profile-desc-page">
-                        <div class="profile-name">Ahfaitar Abdil Hakim</div>
-                        <div class="profile-email">12345@gmail.com</div>
+                        <div class="profile-name"><%= database[0].nama %> </div>
+                        <div class="profile-email"><%= database[0].email %> </div>
                     </div>
-                    <a class="edit-profile" href="/admin/profile/editprofile">
+                    <a class="edit-profile" href="/admin/user/edit_user?id=<%= database[0].nama %>">
                         Edit Profile
                     </a>
                 </div>
