@@ -1,0 +1,33 @@
+<section class="content">
+    <div class="content-main">
+        <div class="content-name">
+            Pesan
+        </div>
+        <div class="content-page">
+            <div class="option-page">
+            </div>
+            <div class="database-contact">
+                <div class="database-contact-title">
+                    <div class="contact-nama">Nama</div>
+                    <div class="contact-email">Email</div>
+                    <div class="contact-judul">Judul Pesan</div>
+                    <div class="contact-isi">Isi Pesan</div>
+                    <div class="edit-contact"></div>
+                </div>
+                <div class="database-contact-value-store">
+                    <% for( let index = 0; index < database.length; index++ ) { %>
+                    <div class="database-contact-value">
+                        <div class="contact-nama"><%= database[index].nama %></div>
+                        <div class="contact-email"><%= database[index].email %></div>
+                        <div class="contact-judul"><%= database[index].judul %></div>
+                        <div class="contact-isi"><%= database[index].isi %></div>
+                        <div class="edit-contact">
+                            <a href="/admin/contact/hapus?id=<%= database[index].id %> "><i class="bi bi-trash"></i></a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

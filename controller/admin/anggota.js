@@ -126,7 +126,6 @@ module.exports = {
             var profile = image.name;
             database.getConnection((err, connection) => {
                 connection.query("SELECT * FROM `anggota` WHERE `anggota`.`nama`='" + id + "'", function (err, result, field) {
-                    console.log(result);
                     fs.unlinkSync(process.cwd() + "/public/img/foto anggota/" + result[0].foto)
                     connection.release()
                 })

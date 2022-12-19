@@ -1,5 +1,6 @@
 const route = require("express").Router()
 
+route.use('/contact', require('./contact'))
 route.use('/profile', require('./profile'))
 route.use('/anggota', require('./anggota'))
 route.use('/berita', require('./berita'))

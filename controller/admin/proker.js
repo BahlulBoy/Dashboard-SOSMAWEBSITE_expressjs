@@ -93,7 +93,6 @@ module.exports = {
             })
             connection.query('SELECT *, nama FROM `proker` ' + "INNER JOIN anggota ON proker.penanggungjawab = anggota.nim" + ' WHERE `proker`.`nama_proker`= ' + "'" + req.query.id + "'", function (err, result, field) {
               if (err) throw err;
-              console.log('SELECT *, nama FROM `proker` ' + "INNER JOIN anggota ON proker.penanggungjawab = anggota.nim" + ' WHERE `proker`.`nama_proker`= ' + "'" + req.query.id + "'");
               res.render('./update_page/proker', {database : result, d: b[0], id : req.query.id, layout: "./layout/errorlayout"});
               connection.release();
             })
@@ -119,8 +118,6 @@ module.exports = {
             var profile = image.name;
             database.getConnection((err, connection) => {
                 connection.query("SELECT * FROM `proker` WHERE `proker`.`nama_proker`='" + id + "'", function (err, result, field) {
-                    console.log(id);
-                    console.log(result[0].dokumentasi);
                     fs.unlinkSync(process.cwd() + "/public/img/dokumentasi/" + result[0].dokumentasi)
                     connection.release()
                 })

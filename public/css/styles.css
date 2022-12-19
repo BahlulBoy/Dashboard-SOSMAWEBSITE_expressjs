@@ -661,3 +661,74 @@ hr{
     margin: 5px 7px 0px 7px;
 }
 /* proker page css */
+
+.database-contact{
+    margin-top: 10px;
+    height: 82%;
+}
+
+.database-contact .database-contact-title{
+    background-color: rgb(139, 126, 255);
+    color: var(--sidebar-fontcolor);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 20px 0px 20px 0px;
+    margin: 5px 7px 0px 7px;
+}
+
+.contact-nama{
+    text-align: center;
+    width: 20%;
+}
+.contact-email{
+    text-align: center;
+    width: 20%;
+}
+.contact-judul{
+    text-align: center;
+    width: 15%;
+}
+.contact-isi{
+    text-align: center;
+    width: 35%;
+}
+.edit-contact{
+    text-align: center;
+    width: 10%;
+    color: var(--sidebar-fontcolor);
+}
+
+.edit-contact a{
+    width: 30%;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--sidebar-background);
+    color: var(--sidebar-fontcolor);
+}
+
+.edit-contact button{
+    width: 30%;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--sidebar-background);
+    color: var(--sidebar-fontcolor);
+}
+
+.database-contact .database-contact-value-store{
+    overflow: auto;
+    height: 87%;
+}
+
+.database-contact .database-contact-value-store .database-contact-value{
+    background-color: rgb(236, 234, 255);
+    color: #15223d;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+    margin: 5px 7px 0px 7px;
+}
