@@ -5,4 +5,7 @@ A project I made for a college assignment
 - express js
 - mysql
 - ejs
-<img src="Screenshot (394).png" alt="Alt text" title="Optional title" style="display: inline-block; margin: 0 auto; max-width: 300px">
+### project view
+<img src="Screenshot (394).png" alt="Alt text" title="Optional title" style="display: inline-block; margin: 0 20px; width: 700px;">
+<img src="Screenshot (394).png" alt="Alt text" title="Optional title" style="display: inline-block; margin: 0 20px; width: 700px;">
+<img src="Screenshot (394).png" alt="Alt text" title="Optional title" style="display: inline-block; margin: 0 20px; width: 700px;">
