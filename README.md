@@ -5,4 +5,4 @@ A project I made for a college assignment
 - express js
 - mysql
 - ejs
-<img src="Screenshot (394).png" alt="Alt text" title="Optional title">
+<img src="Screenshot (394).png" alt="Alt text" title="Optional title" max-width="200px">
