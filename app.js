@@ -1,6 +1,5 @@
 const express = require('express')
 const layout_ejs = require('express-ejs-layouts')
-const mysql = require("mysql")
 const upload = require("express-fileupload")
 const session = require("express-session")
 const bodyparser = require("body-parser")
@@ -25,13 +24,6 @@ app.use(upload())
 app.set('view engine', 'ejs')
 app.set('layout', './layout/layout')
 var urlencodedParser = bodyparser.urlencoded({ extended: false })
-
-const pool = mysql.createPool({
-    host        : 'localhost',
-    user        : 'root',
-    password    : '',
-    database    : 'web_organisasi',
-  })
 
 app.use('/admin', (req, res, next) => {
     if (req.session.loginid) {
