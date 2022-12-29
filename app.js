@@ -1,6 +1,5 @@
 const express = require('express')
 const layout_ejs = require('express-ejs-layouts')
-const mysql = require("mysql")
 const upload = require("express-fileupload")
 const session = require("express-session")
 const bodyparser = require("body-parser")
