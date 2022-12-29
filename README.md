@@ -1,6 +1,7 @@
 # dashboard_web_dinamis_expressjs
 A project I made for a college assignment
 ## What inside project
+this project is about a dashboard website for manage database organization website.
 - Node js
 - express js
 - mysql
