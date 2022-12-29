@@ -2,6 +2,8 @@
 A project I made for a college assignment
 ## What inside project
 this project is about a dashboard website for manage database organization website.
+for make this project i use:
+- bootstrap
 - Node js
 - express js
 - mysql
