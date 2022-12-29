@@ -26,13 +26,6 @@ app.set('view engine', 'ejs')
 app.set('layout', './layout/layout')
 var urlencodedParser = bodyparser.urlencoded({ extended: false })
 
-const pool = mysql.createPool({
-    host        : 'localhost',
-    user        : 'root',
-    password    : '',
-    database    : 'web_organisasi',
-  })
-
 app.use('/admin', (req, res, next) => {
     if (req.session.loginid) {
         next()
