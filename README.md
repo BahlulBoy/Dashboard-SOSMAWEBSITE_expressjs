@@ -5,3 +5,4 @@ A project I made for a college assignment
 - express js
 - mysql
 - ejs
+<img src="/path/to/img.jpg" alt="Alt text" title="Optional title">
